@@ -1,0 +1,28 @@
+npm init
+npm install inquirer
+code .
+
+go to package.json, find "scripts": {
+  /add-->  "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+create index.js
+
+copy and paste in :
+
+var inquirer = require('inquirer');
+inquirer
+  .prompt([
+    /* Pass your questions in here */
+  ])
+  .then((answers) => {
+    // Use user feedback for... whatever!!
+  })
+  .catch((error) => {
+    if (error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else went wrong
+    }
+  });
